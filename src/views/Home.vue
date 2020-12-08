@@ -7,7 +7,7 @@
 <script>
 import RecipeList from "../components/RecipeList.vue"
 export default {
-  name: 'recipes',
+  name: 'Home',
   components: {
     RecipeList
   },
@@ -16,8 +16,9 @@ export default {
     }
   },
   computed: {
-    products() {
+    recipes() {
       return this.$root.$data.recipes;
+      // return this.$root.$data.recipes.filter(recipe => recipe.name.toLowerCase().search(this.searchText) >= 0);
     }
   },
 }

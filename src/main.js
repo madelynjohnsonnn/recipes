@@ -9,6 +9,8 @@ let data = {
   recipes: mock
 }
 
+export{ data };
+
 new Vue({
   router,
   data,

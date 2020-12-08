@@ -11,7 +11,11 @@
       </div>
       <div class="time">
         <h2>{{recipe.time}}</h2>
-        <button class="auto">Open</button>
+        <!-- <button class="auto">Open</button> -->
+        <button type="button" class="collapsible" @click="openBox()">View Recipe</button>
+        <div class="content" @click="printRecipe(recipe.name)">
+          {{printRecipe(recipe.name)}}
+        </div>
       </div>
     </div>
   </div>
@@ -23,6 +27,60 @@ export default {
   name: 'RecipeList',
   props: {
     recipes: Array
+  },
+  methods: {
+    openBox() {
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    },
+    printRecipe(name) {
+      var out;
+      if (name === "Cheesecake") {
+        out = "cheesecake recipe";
+      }
+      else if (name === "Chocolate Chip Cookies") {
+        out = "cookie";
+      }
+      else if (name === "Lasagna") {
+        out = "Lasagna";
+      }
+      else if (name === "Mac and Cheese") {
+        out = "Mac and Cheese";
+      }
+      else if (name === "Mashed Potatoes") {
+        out = "Mashed Potatoes";
+      }
+      else if (name === "Muffins") {
+        out = "Muffins";
+      }
+      else if (name === "Nachos") {
+        out = "Nachos";
+      }
+      else if (name === "Pancakes") {
+        out = "Pancakes";
+      }
+      else {
+        out = "other recipe";
+      }
+
+      // document.getElementById('content').innerHTML = out;
+      // document.write(out);
+      return out;
+      // var elem = document.getElementById('content');
+      // elem.innerHTML = out;
+    }
   }
 }
 </script>
@@ -60,8 +118,32 @@ export default {
   margin-bottom: 5px;
 }
 
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
 .info {
-  background: #F2921D;
+  background: #FDEBD0;
   color: #000;
   padding: 10px 30px;
   height: 80px;
