@@ -48,28 +48,28 @@ export default {
     printRecipe(name) {
       var out;
       if (name === "Cheesecake") {
-        out = "cheesecake recipe";
+        out = "Ingredients: Eggs, Cream Cheese, Graham Crackers\n\nDirections: Mix the ingredients and use the graham cracker to make the crust.";
       }
       else if (name === "Chocolate Chip Cookies") {
-        out = "cookie";
+        out = "Ingredients: Chocolate Chips, Eggs, and Flour\n\nDirections: Mix all of the ingredients and cook at 350 degrees for 11 minutes.";
       }
       else if (name === "Lasagna") {
-        out = "Lasagna";
+        out = "Ingredients: Meat, Noodles, and tomatoes\n\nDirections: Cook this at 375 degree";
       }
       else if (name === "Mac and Cheese") {
-        out = "Mac and Cheese";
+        out = "Ingredients: Noodles, cheese, and butter\n\nDirections: Cook the noodles until soft and then mix the butter and cheese in.";
       }
       else if (name === "Mashed Potatoes") {
-        out = "Mashed Potatoes";
+        out = "Ingredients: Potatoes, butter, cheese\n\nDirections: Peel the potatoes and boil them in water until soft. Mix cheese and butter in.";
       }
       else if (name === "Muffins") {
-        out = "Muffins";
+        out = "Ingredients: Muffin mix, vegetable oil, water, butter\n\nDirections: Mix all ingredients together and cook at 375 degrees.";
       }
       else if (name === "Nachos") {
-        out = "Nachos";
+        out = "Ingredients: Chips, cheese, salsa\n\nDirections: Melt cheese on top of tortilla chips and then put the salsa on top.";
       }
       else if (name === "Pancakes") {
-        out = "Pancakes";
+        out = "Ingredients: Pancake mix, water\n\nDirections: Mix the pancake mix and water and cook in circular shapes on a griddle.";
       }
       else {
         out = "other recipe";
@@ -102,13 +102,13 @@ export default {
 .recipe {
   margin: 10px;
   margin-top: 50px;
-  width: 200px;
+  width: 400px;
 }
 
 .recipe img {
   border: 2px solid #333;
   height: 250px;
-  width: 200px;
+  width: 400px;
   object-fit: cover;
 }
 
