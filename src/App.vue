@@ -11,6 +11,7 @@ import data from './main.js'
     <RecipeList :recipes="recipes" />
     <div class="footer">
       <p><a href="https://github.com/madelynjohnsonnn/recipes.git">GITHUB LINK</a></p>
+      <p><a href="../references.html">REFERENCES</a></p>
     </div>
   </div>
 </template>
